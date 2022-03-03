@@ -1,9 +1,28 @@
 {
   "files": {
     "main.css": "/mausam/static/css/main.74d18b4c.css",
-    "main.js": "/mausam/static/js/main.babf0d78.js",
+    "main.js": "/mausam/static/js/main.34f82b2c.js",
     "static/media/xyz2.gif": "/mausam/static/media/xyz2.370e26a790b9565f6ba8.gif",
-    "static/media/mainBg.jpg": "/mausam/static/media/mainBg.ef45934b7dc35b63f6cf.jpg",
+    "static/media/13d.jpg": "/mausam/static/media/13d.2f800cf6891a48e2bdee.jpg",
+    "static/media/13n.jpg": "/mausam/static/media/13n.2f800cf6891a48e2bdee.jpg",
+    "static/media/50d.jpg": "/mausam/static/media/50d.52f2eca83a44d2b1aeb4.jpg",
+    "static/media/02n.jpg": "/mausam/static/media/02n.4e964d8072fcf2128bf6.jpg",
+    "static/media/11d.jpg": "/mausam/static/media/11d.70189adc73ab877674e2.jpg",
+    "static/media/03d.jpg": "/mausam/static/media/03d.4b2cee3f4156bc336134.jpg",
+    "static/media/02d.jpg": "/mausam/static/media/02d.ca4e2190df3d82cd660b.jpg",
+    "static/media/10n.jpg": "/mausam/static/media/10n.53efd88e7247e442901b.jpg",
+    "static/media/50n.jpg": "/mausam/static/media/50n.37c6e5eebbf86a8f1ba5.jpg",
+    "static/media/mainBg.jpg": "/mausam/static/media/mainBg.fa2fce42324befe45536.jpg",
+    "static/media/09n.jpg": "/mausam/static/media/09n.d1f8170958ca4037bd0e.jpg",
+    "static/media/09d.jpg": "/mausam/static/media/09d.5793fb74157455e757ad.jpg",
+    "static/media/04d.jpg": "/mausam/static/media/04d.3f4df27027dc33374816.jpg",
+    "static/media/03n.jpg": "/mausam/static/media/03n.975569c1b437c7576b7e.jpg",
+    "static/media/10d.jpg": "/mausam/static/media/10d.fdaebeb9b41efc016870.jpg",
+    "static/media/01d.jpg": "/mausam/static/media/01d.e0ba920254d12053f894.jpg",
+    "static/media/01n.jpg": "/mausam/static/media/01n.132b6ee6c620c29a246e.jpg",
+    "static/media/11n.jpg": "/mausam/static/media/11n.8fceed40b29f4a8c1d83.jpg",
+    "static/media/02nx.jpg": "/mausam/static/media/02nx.eec058a663970156486c.jpg",
+    "static/media/04n.jpg": "/mausam/static/media/04n.8fece743ec8b8ed85030.jpg",
     "static/media/04d.png": "/mausam/static/media/04d.3b3658bef7b199c2b5b3.png",
     "static/media/11d.png": "/mausam/static/media/11d.0454555b30f2ac9b5114.png",
     "static/media/13d.png": "/mausam/static/media/13d.cb766b81e3764ee087bd.png",
@@ -26,10 +45,10 @@
     "index.html": "/mausam/index.html",
     "static/media/search.svg": "/mausam/static/media/search.1b1fdd93949d7445d120599f6cbb0c62.svg",
     "main.74d18b4c.css.map": "/mausam/static/css/main.74d18b4c.css.map",
-    "main.babf0d78.js.map": "/mausam/static/js/main.babf0d78.js.map"
+    "main.34f82b2c.js.map": "/mausam/static/js/main.34f82b2c.js.map"
   },
   "entrypoints": [
     "static/css/main.74d18b4c.css",
-    "static/js/main.babf0d78.js"
+    "static/js/main.34f82b2c.js"
   ]
 }
