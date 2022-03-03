@@ -1,8 +1,11 @@
 import React from 'react'
+import Mausam from './components/Mausam'
 
 const App = () => {
   return (
-    <div>Saumya Dubey</div>
+    <div>
+      <Mausam />
+    </div>
   )
 }
 
