@@ -86,7 +86,7 @@ const Mausam = () => {
             const res_images = await fetch(url_images);
             const res_data = await res_images.json();
             if(res_data.results.length === 0){
-                setImg(currentData.weather[0].icon);
+                setImg(current.weather[0].icon);
                 setRes(false)
             }
             else {
@@ -99,6 +99,7 @@ const Mausam = () => {
             // }
         } 
         catch(error) {
+            console.log(error)
             setError(true);
             setLoading(false)
         }
