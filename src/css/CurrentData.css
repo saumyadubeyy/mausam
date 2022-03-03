@@ -1,0 +1,106 @@
+.current {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.date {
+    font-size: 1.2vw;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 0 0 3px #fff, 0 0 5px #000000;
+}
+
+.cityName {
+    font-size: 2.9vw;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+    /* text-shadow: 2px 2px 15px rgba(150, 150, 150, 1); */
+    /* padding-top: 1.2vw; */
+    padding-bottom: 0.6vw;
+    text-shadow: 0 0 3px #fff, 0 0 5px #000000;
+}
+
+.main-current-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vw;
+    width: 50vw;
+    align-items: center;
+}
+
+.current-holder {
+    display: flex;
+    align-items: flex-end;
+    gap: 4vw;
+}
+
+
+.main-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5vw;
+}
+.main-temp {
+    font-size: 4vw;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 3px #fff, 0 0 5px #000000;
+}
+
+.feels-like {
+    color: #fff;
+    font-size: 1.5vw;
+    text-shadow: 0 0 3px #fff, 0 0 5px #000000;
+    font-weight: 500;
+}
+
+.icon-holder {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+
+.current-icon {
+    width: 6.5vw;
+}
+
+.current-description {
+    text-transform: lowercase;
+    color: #fff;
+    font-size: 1.5vw;
+    text-shadow: 0 0 3px #fff, 0 0 5px #000000;
+    font-weight: 500;
+}
+
+.sun-holder {
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+    text-align: center;
+}
+
+.sun {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vw;
+}
+
+.sun-holder span {
+    color: #fff;
+    font-size: 1.2vw;
+    font-weight: 500;
+    letter-spacing: 0.1vw;
+    text-shadow: 0 0 3px #fff, 0 0 5px #000000;
+}
+
+.sun-icon {
+    width: 6vw;
+}

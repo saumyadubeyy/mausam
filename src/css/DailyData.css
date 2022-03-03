@@ -1,0 +1,31 @@
+.daily-data-holder {
+    display: flex;
+    justify-content: center;
+    /* gap: 0.6vw; */
+    gap: 1vw;
+    padding-top: 2vw;
+    flex-wrap: wrap;
+    width: 50vw;
+}
+
+.data-box {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    box-shadow: 0px -2px 3px #fff;
+    box-shadow: 0px -1px 2px 1px #fff;
+    /* padding: 0.6vw; */
+    padding: 0.6vw 1.5vw 0.5vw 1.5vw;
+    border-radius: 0.8vw;
+    align-items: center;
+    text-shadow: 0 0 3px #fff, 0 0 5px #000000;
+}
+
+.data-box:hover {
+    background-color: #191919;
+}
+
+.data-box img {
+    width: 5vw;
+}
