@@ -3,7 +3,7 @@
     min-height: 100vh;
     background-size: 100% 100%;
     background-repeat: repeat-y;
-    text-align: center;
+    /* text-align: center; */
     /* background-color: pink; */
 }
 
@@ -71,18 +71,6 @@
     text-shadow: 0 0 3px #fff, 0 0 5px #000000;
 }
 
-.bg {
-    width: 100vw;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    max-height: 100vh;
-    z-index: -1000;
-    /* filter: saturate(0); */
-    filter: brightness(80%);
-    position:absolute;
-}
-
 .main {
     display: flex;   
     justify-content: space-around;
@@ -130,16 +118,27 @@
     transform: translate(-50%,-50%);
     left: 50%;
     top: 50%;
-    bottom: 0;
     overflow: hidden;
 }
+
 .bg {
+    width: 100vw;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1000;
+    height: 100vh;
+    filter: brightness(80%);
+    position:absolute;
     animation: fadeIn ease 5s;
     -webkit-animation: fadeIn ease 5s;
     -moz-animation: fadeIn ease 5s;
     -o-animation: fadeIn ease 5s;
     -ms-animation: fadeIn ease 5s;
   }
+
+
   @keyframes fadeIn {
     0% {
       opacity:0;

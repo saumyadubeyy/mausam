@@ -3,9 +3,11 @@
     justify-content: center;
     /* gap: 0.6vw; */
     gap: 1vw;
-    padding-top: 2vw;
+    padding-top: 1.5vw;
     flex-wrap: wrap;
     width: 50vw;
+    /* margin-bottom: 0; */
+    position: relative;
 }
 
 .data-box {
