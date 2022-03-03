@@ -4,11 +4,11 @@ import "../css/CurrentData.css"
 import sunrise from "../assets/sunrise.png"
 import sunset from "../assets/sunset.png"
 
-const CurrentData = ({item, showUnit, cityName}) => {
+const CurrentData = ({item, showUnit, cityName, country}) => {
 
   return (
     <div className='current'>
-        <div className='cityName'>{cityName}</div>
+        <div className='cityName'>{cityName}, {country}</div>
           <div className='date'>{day(item.dt)}, {time(item.dt)}</div>
           <div className='date'>{dateSuffix(item.dt)}{dateFunction(item.dt)}</div>
         <div className='main-current-holder'>
