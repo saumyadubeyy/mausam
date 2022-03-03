@@ -23,6 +23,8 @@ const Mausam = () => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false);
     const [display, setDisplay] = useState(false)
+    const [country, setCountry] = useState('')
+    const [res, setRes] = useState(true)
 
     const fetchData = async (e) => {
         try {
@@ -31,7 +33,10 @@ const Mausam = () => {
             const url1 = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${API_KEY}`;
             const res = await fetch(url1);
             const data = await res.json();
-                // console.log(data)
+                // console.log(data.sys.country)
+            let regionNames = new Intl.DisplayNames(['en'], {type: 'region'});
+            const countryName = regionNames.of(data.sys.country);
+            setCountry(countryName);
             const lat = data.coord.lat;
             const lon = data.coord.lon;
             const name = data.name;
@@ -59,7 +64,6 @@ const Mausam = () => {
             setError(false)
             setLoading(false)  
             setDisplay(true)
-            setSearch("");
             // // fetching images for the entered city: 
             // const url_places = `https://pixabay.com/api/?key=${API_KEY_PLACES}&q=${name}&min_width=1400&min_height=560&orientation=horizontal&category=travel`
             // const places_res = await fetch(url_places);
@@ -81,14 +85,20 @@ const Mausam = () => {
             const url_images = `https://api.unsplash.com/search/photos/?client_id=${PLACES_KEY}&w=1400&query=${search}&h=1000&orientation=landscape`
             const res_images = await fetch(url_images);
             const res_data = await res_images.json();
-            const image = res_data.results[0].urls.regular;
+            if(res_data.results.length === 0){
+                setImg(currentData.weather[0].icon);
+                setRes(false)
+            }
+            else {
+                const image = res_data.results[0].urls.regular;
+                setImg(image)
+            }
+            
             // const lowQualityImage = res_data.results[0].urls.small;
-            setImg(image)
             // for(let i=0; i<array.length; i++){
             // }
         } 
         catch(error) {
-            console.log(error)
             setError(true);
             setLoading(false)
         }
@@ -140,9 +150,9 @@ const Mausam = () => {
                         {
                             currentData ? 
                             <div className='main'>
-                                <img src={img} alt=" " className='bg' />
+                                <img src={res ? img : require(`../assets/backgrounds/${img}.jpg`)} alt=" " className='bg' />
                                 <div className='left'>
-                                    <CurrentData item={currentData} showUnit={showUnit} cityName={cityName} />
+                                    <CurrentData item={currentData} showUnit={showUnit} cityName={cityName} country={country} />
                                     <DailyData item={dailyData} showUnit={showUnit} />
                                 </div>
                                 <div className='right'>
