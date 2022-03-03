@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/mausam/static/css/main.74d18b4c.css",
+    "main.js": "/mausam/static/js/main.babf0d78.js",
+    "static/media/xyz2.gif": "/mausam/static/media/xyz2.370e26a790b9565f6ba8.gif",
+    "static/media/mainBg.jpg": "/mausam/static/media/mainBg.ef45934b7dc35b63f6cf.jpg",
+    "static/media/04d.png": "/mausam/static/media/04d.3b3658bef7b199c2b5b3.png",
+    "static/media/11d.png": "/mausam/static/media/11d.0454555b30f2ac9b5114.png",
+    "static/media/13d.png": "/mausam/static/media/13d.cb766b81e3764ee087bd.png",
+    "static/media/13n.png": "/mausam/static/media/13n.cb766b81e3764ee087bd.png",
+    "static/media/50n.png": "/mausam/static/media/50n.6c9e7390fa4cc79bb652.png",
+    "static/media/09d.png": "/mausam/static/media/09d.cb7a9cf6f67c04001be2.png",
+    "static/media/10d.png": "/mausam/static/media/10d.527d9f962019d830bb5b.png",
+    "static/media/02n.png": "/mausam/static/media/02n.12ffa70afc3cdbd8e8cc.png",
+    "static/media/50d.png": "/mausam/static/media/50d.f8fe8b233b0462ef9d41.png",
+    "static/media/11n.png": "/mausam/static/media/11n.5acf15d91161ff4386f4.png",
+    "static/media/10n.png": "/mausam/static/media/10n.f5dcd6a8c99341528daf.png",
+    "static/media/04n.png": "/mausam/static/media/04n.f003069c8d4bd6828dba.png",
+    "static/media/02d.png": "/mausam/static/media/02d.048eacc725e9a07d44f9.png",
+    "static/media/09n.png": "/mausam/static/media/09n.bea5abbc5600fe7f5cfb.png",
+    "static/media/01d.png": "/mausam/static/media/01d.6d48da504f4816188c8d.png",
+    "static/media/sunrise.png": "/mausam/static/media/sunrise.21f0fd638577780cbfc6.png",
+    "static/media/sunset.png": "/mausam/static/media/sunset.0ef65265612c37d5a889.png",
+    "static/media/01n.png": "/mausam/static/media/01n.d52124f5a65ef42ece9e.png",
+    "static/media/loader.svg": "/mausam/static/media/loader.c2cb9ed7cc207a2a80fbb9fc1e6c3b5d.svg",
+    "index.html": "/mausam/index.html",
+    "static/media/search.svg": "/mausam/static/media/search.1b1fdd93949d7445d120599f6cbb0c62.svg",
+    "main.74d18b4c.css.map": "/mausam/static/css/main.74d18b4c.css.map",
+    "main.babf0d78.js.map": "/mausam/static/js/main.babf0d78.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.74d18b4c.css",
+    "static/js/main.babf0d78.js"
+  ]
+}
