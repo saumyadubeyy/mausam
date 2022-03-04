@@ -1,0 +1,13 @@
+.footer {
+    padding: 0 2vw;
+    font-weight: 700;
+    position: absolute;
+    bottom: 1vw;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.footer img {
+    padding: 0.5vw;
+    padding-bottom: 0;
+}
