@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mausam/static/css/main.74d18b4c.css",
-    "main.js": "/mausam/static/js/main.af1c05ce.js",
+    "main.css": "/mausam/static/css/main.88659901.css",
+    "main.js": "/mausam/static/js/main.d758d6dc.js",
     "static/media/xyz2.gif": "/mausam/static/media/xyz2.370e26a790b9565f6ba8.gif",
     "static/media/13d.jpg": "/mausam/static/media/13d.2f800cf6891a48e2bdee.jpg",
     "static/media/13n.jpg": "/mausam/static/media/13n.2f800cf6891a48e2bdee.jpg",
@@ -44,11 +44,11 @@
     "static/media/loader.svg": "/mausam/static/media/loader.c2cb9ed7cc207a2a80fbb9fc1e6c3b5d.svg",
     "index.html": "/mausam/index.html",
     "static/media/search.svg": "/mausam/static/media/search.1b1fdd93949d7445d120599f6cbb0c62.svg",
-    "main.74d18b4c.css.map": "/mausam/static/css/main.74d18b4c.css.map",
-    "main.af1c05ce.js.map": "/mausam/static/js/main.af1c05ce.js.map"
+    "main.88659901.css.map": "/mausam/static/css/main.88659901.css.map",
+    "main.d758d6dc.js.map": "/mausam/static/js/main.d758d6dc.js.map"
   },
   "entrypoints": [
-    "static/css/main.74d18b4c.css",
-    "static/js/main.af1c05ce.js"
+    "static/css/main.88659901.css",
+    "static/js/main.d758d6dc.js"
   ]
 }
