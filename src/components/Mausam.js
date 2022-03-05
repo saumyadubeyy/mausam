@@ -148,7 +148,7 @@ const Mausam = () => {
                 {
                     loading ? 
                     <img src={loader} alt=" " />
-                    :
+                    : 
                     <>
                         {
                             currentData ? 
