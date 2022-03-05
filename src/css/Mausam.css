@@ -195,3 +195,39 @@
     padding-bottom: 5vw;
 }
 
+@media (max-width : 400px) {
+  .heading {
+    padding-top: 10vw;
+    font-size: 12vw;
+  }
+  .heading-text {
+    font-size: 4vw;
+  }
+  .form {
+    padding: 7vw 1vw;
+  }
+  .search-box {
+    font-size: 6vw;
+    width: 100%;
+    padding: 2vw;
+  }
+  .img {
+    width: 7vw !important;
+    top: 50% !important;
+    padding-right: 0 !important;
+    /* left: 50% !important; */
+    transform: translate(-50%,-50%) !important;
+  }
+  .radio-buttons {
+    flex-direction: column;
+    margin-top: 4vw;
+    font-size: 4.8vw;
+  }
+  .main {
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+  }
+}
+

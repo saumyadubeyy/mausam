@@ -5,6 +5,7 @@
     justify-content: space-between;
 }
 
+
 .date {
     font-size: 1.2vw;
     color: #fff;
@@ -102,4 +103,28 @@
 
 .sun-icon {
     width: 5vw;
+}
+
+@media (max-width: 400px) {
+    .current{
+        /* justify-content: center; */
+        
+        
+    }
+    /* .cityName {
+        font-size: 8vw;
+    }
+    .date {
+        font-size: 5vw;
+    }
+    .main-current-holder {
+        width: 100%;
+        
+    }
+    .main-holder {
+        background-color: red;
+    }
+    .main-temp {
+        
+    } */
 }
