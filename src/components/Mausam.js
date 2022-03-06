@@ -1,4 +1,4 @@
-import React, {useState } from 'react'
+import React, {useState} from 'react'
 import CurrentData from "./CurrentData"
 import DailyData from "./DailyData"
 import HourlyData from "./HourlyData"
@@ -8,7 +8,6 @@ import loader from "../assets/loader.svg"
 import bg from "../assets/xyz2.gif"
 import mainBg from "../assets/mainBg.jpg"
 import Footer from './Footer'
-
 
 const API_KEY = `${process.env.REACT_APP_MAUSAM_API_KEY}`
 const PLACES_KEY = `${process.env.REACT_APP_UNSPLASH_API_KEY}`;
@@ -28,12 +27,16 @@ const Mausam = () => {
     const [country, setCountry] = useState('')
     const [res, setRes] = useState(true)
 
+    function isEmptyOrSpaces(str){
+        return str === null || str.match(/^ *$/) !== null;
+    }
+
     const fetchData = async (e) => {
         setImg("")
-        try {
+        try {           
             // e.preventDefault();
             //fetching latitude and longitude from the searched city
-            const url1 = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${API_KEY}`;
+            const url1 = `https://api.openweathermap.org/data/2.5/weather?q=${search.trim()}&appid=${API_KEY}`;
             const res = await fetch(url1);
             const data = await res.json();
                 // console.log(data.sys.country)
@@ -67,25 +70,11 @@ const Mausam = () => {
             setError(false)
             setLoading(false)  
             setDisplay(true)
-            // // fetching images for the entered city: 
-            // const url_places = `https://pixabay.com/api/?key=${API_KEY_PLACES}&q=${name}&min_width=1400&min_height=560&orientation=horizontal&category=travel`
-            // const places_res = await fetch(url_places);
-            // const places_data = await places_res.json();
-            // console.log(places_data.hits[1].largeImageURL)
-            // const img = places_data.hits[1].largeImageURL;
-            // setImg(img);
+            if(isEmptyOrSpaces(search)){
+                setError(true)
+            }
 
-
-            //fetching images for searched cityname:
-            // const url_images = `https://api.unsplash.com/search/photos/?client_id=${API_IMAGES}&w=1400&query=${cityName}&h=500`
-            // const images_res = await fetch(url_images);
-            // const images_data = await images_res.json();
-            // console.log(images_data.results[0].urls.full)     ;
-            // const bg = images_data.results[0].urls.full;
-            // console.log(bg)
-            // setDisplaySearch(false)
-
-            const url_images = `https://api.unsplash.com/search/photos/?client_id=${PLACES_KEY}&w=1400&query=${search.toLowerCase()}&h=1000&orientation=landscape`
+            const url_images = `https://api.unsplash.com/search/photos/?client_id=${PLACES_KEY}&w=1400&query=${search.toLowerCase().trim()}&h=1000&orientation=landscape`
             const res_images = await fetch(url_images);
             const res_data = await res_images.json();
             if(res_data.results.length === 0){
@@ -97,9 +86,6 @@ const Mausam = () => {
                 setImg(image)
             }
             
-            // const lowQualityImage = res_data.results[0].urls.small;
-            // for(let i=0; i<array.length; i++){
-            // }
         } 
         catch(error) {
             setError(true);

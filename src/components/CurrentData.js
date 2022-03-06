@@ -1,14 +1,19 @@
+/* eslint-disable no-lone-blocks */
 import React from 'react'
 import { dateFunction, sunTimings, dateSuffix, day, time} from '../util/MausamUtil'
 import "../css/CurrentData.css"
 import sunrise from "../assets/sunrise.png"
 import sunset from "../assets/sunset.png"
 
-const CurrentData = ({item, showUnit, cityName, country}) => {
-
+const CurrentData = ({item, showUnit, cityName, country}) => { 
+  
+  const letterCount = (cityName) => {
+    return cityName.replace(/[^a-zA-Z]/g, '').length;
+  }
+  
   return (
     <div className='current'>
-        <div className='cityName'>{cityName}, {country}</div>
+        <div className={ letterCount(cityName) > 20 ? 'citynameBig' : 'cityName'}>{cityName}, {letterCount(cityName) >= 20 ? <br/> : null} {country}</div>
           <div className='date'>{day(item.dt)}, {time(item.dt)}</div>
           <div className='date'>{dateSuffix(item.dt)}{dateFunction(item.dt)}</div>
         <div className='main-current-holder'>
