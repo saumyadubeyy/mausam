@@ -26,6 +26,18 @@
     text-shadow: 0 0 3px #fff, 0 0 5px #000000;
 }
 
+.citynameBig {
+    font-size: 2.5vw;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+    /* text-shadow: 2px 2px 15px rgba(150, 150, 150, 1); */
+    /* padding-top: 1.2vw; */
+    padding-bottom: 0.6vw;
+    text-shadow: 0 0 3px #fff, 0 0 5px #000000;
+}
+
 .main-current-holder {
     display: flex;
     flex-direction: column;
