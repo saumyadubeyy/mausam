@@ -126,13 +126,13 @@
 .bg {
     width: 100vw;
     margin: auto;
-    position: absolute;
     top: 0;
     bottom: 0;
     z-index: -1000;
     height: 100vh;
     filter: brightness(80%);
-    position:absolute;
+    /* position: absolute; */
+    position: fixed;
     animation: fadeIn ease 5s;
     -webkit-animation: fadeIn ease 5s;
     -moz-animation: fadeIn ease 5s;

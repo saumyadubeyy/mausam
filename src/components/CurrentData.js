@@ -5,17 +5,17 @@ import "../css/CurrentData.css"
 import sunrise from "../assets/sunrise.png"
 import sunset from "../assets/sunset.png"
 
-const CurrentData = ({item, showUnit, cityName, country}) => { 
+const CurrentData = ({item, showUnit, cityName, country, timezone}) => { 
   
   const letterCount = (cityName) => {
     return cityName.replace(/[^a-zA-Z]/g, '').length;
   }
-  
+
   return (
     <div className='current'>
         <div className={ letterCount(cityName) > 20 ? 'citynameBig' : 'cityName'}>{cityName}, {letterCount(cityName) >= 20 ? <br/> : null} {country}</div>
-          <div className='date'>{day(item.dt)}, {time(item.dt)}</div>
-          <div className='date'>{dateSuffix(item.dt)}{dateFunction(item.dt)}</div>
+          <div className='date'>{day(item.dt, timezone)}, {time(item.dt, timezone)}</div>
+          <div className='date'>{dateSuffix(item.dt, timezone)}{dateFunction(item.dt,timezone)}</div>
         <div className='main-current-holder'>
             <div className='current-holder'>
                 <div className='main-holder'>
@@ -30,11 +30,11 @@ const CurrentData = ({item, showUnit, cityName, country}) => {
             <div className='sun-holder'>
                 <div className='sun'>
                   <img src={sunrise} alt=" " className='sun-icon' />
-                  <span>{sunTimings(item.sunrise)}</span>
+                  <span>{sunTimings(item.sunrise, timezone)}</span>
                 </div>
                 <div className='sun'>
                   <img src={sunset} alt=" " className='sun-icon' /> 
-                  <span>{sunTimings(item.sunset)}</span>
+                  <span>{sunTimings(item.sunset, timezone)}</span>
                 </div>
             </div>
          </div>
