@@ -25,7 +25,8 @@ const Mausam = () => {
     const [error, setError] = useState(false);
     const [display, setDisplay] = useState(false)
     const [country, setCountry] = useState('')
-    const [res, setRes] = useState(true)
+    const [timezone, setTimezone] = useState('')
+
 
     function isEmptyOrSpaces(str){
         return str === null || str.match(/^ *$/) !== null;
@@ -54,10 +55,9 @@ const Mausam = () => {
             //today's forecast:
             const current = mainData.current;
             setCurrentData(current);
-            // console.log(current.weather[0].icon)
-                    // const img = current.weather[0].icon;
-                    // setImg(img);
             // hourly forecast
+            const tz = mainData.timezone;
+            setTimezone(tz)
             const hourly = mainData.hourly;
             setHourlyData(hourly);
             //daily data
@@ -73,13 +73,11 @@ const Mausam = () => {
             if(isEmptyOrSpaces(search)){
                 setError(true)
             }
-
             const url_images = `https://api.unsplash.com/search/photos/?client_id=${PLACES_KEY}&w=1400&query=${search.toLowerCase().trim()}&h=1000&orientation=landscape`
             const res_images = await fetch(url_images);
             const res_data = await res_images.json();
             if(res_data.results.length === 0){
-                setImg(current.weather[0].icon);
-                setRes(false)
+                setImg(mainBg)
             }
             else {
                 const image = res_data.results[0].urls.regular;
@@ -92,7 +90,6 @@ const Mausam = () => {
             setLoading(false)
         }
     }
-
   return (
     <div className='weather'> 
                 <div className={display ? 'form' : 'formDisplay'}>
@@ -139,13 +136,13 @@ const Mausam = () => {
                         {
                             currentData ? 
                             <div className='main'>
-                                <img src={res ? img : require(`../assets/backgrounds/${img}.jpg`)} alt=" " className='bg' />
+                                <img src={img} alt=" " className='bg' />
                                 <div className='left'>
-                                    <CurrentData item={currentData} showUnit={showUnit} cityName={cityName} country={country} />
-                                    <DailyData item={dailyData} showUnit={showUnit} />
+                                    <CurrentData item={currentData} showUnit={showUnit} cityName={cityName} country={country} timezone={timezone} />
+                                    <DailyData item={dailyData} showUnit={showUnit} timezone={timezone} />
                                 </div>
                                 <div className='right'>
-                                    <HourlyData item={hourlyData} showUnit={showUnit} />
+                                    <HourlyData item={hourlyData} showUnit={showUnit} timezone={timezone} />
                                 </div>
                             </div>
                             :
@@ -184,7 +181,7 @@ const Mausam = () => {
                                             /> Celcius
                                         </label>
                                     </div>
-                        </div> 
+                                </div> 
                         { error ? <div className='error'>PLEASE ENTER A VALID CITY NAME</div> : null}
                         <Footer />
                     </div>
@@ -228,11 +225,6 @@ const Mausam = () => {
                                             /> Celcius
                                         </label>
                                     </div>
-                                    {/* <img src={clouds} alt=" " className='gif-clouds'/> */}
-                                    {/* <div className='clouds'>
-                                        <img src={clouds} alt=" " />
-                                        <img src={clouds} alt=" " />
-                                    </div> */}
                         </div> 
                             { error ? <div className='error'>PLEASE ENTER A VALID CITY NAME</div> : null}
                 </div>

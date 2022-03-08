@@ -2,7 +2,7 @@ import React from 'react'
 import { dayFunction } from '../util/MausamUtil'
 import "../css/DailyData.css"
 
-const DailyData = ({item, showUnit}) => {
+const DailyData = ({item, showUnit, timezone}) => {
   const data = item.slice(1,6);
   return (
     <div className='daily-data'>
@@ -13,7 +13,7 @@ const DailyData = ({item, showUnit}) => {
               data.map((data) => {
                 return (  
                   <div key={data.dt} className="data-box">
-                    <div>{dayFunction(data.dt)}</div>
+                    <div>{dayFunction(data.dt, timezone)}</div>
                     <img style={{width : "4vw"}} src={require(`../assets/icons/${data.weather[0].icon}.png`)} className='hello' alt="" />
                     <div>{data.temp.day} °{showUnit}</div>
                     {/* <div>Max: {data.temp.max} °{showUnit}</div>
