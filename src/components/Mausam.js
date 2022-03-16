@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import CurrentData from "./CurrentData"
 import DailyData from "./DailyData"
 import HourlyData from "./HourlyData"
@@ -7,7 +7,9 @@ import searchGlass from "../assets/search.svg"
 import loader from "../assets/loader.svg"
 import bg from "../assets/xyz2.gif"
 import mainBg from "../assets/mainBg.jpg"
+import mobileBG from "../assets/mobileBG.gif"
 import Footer from './Footer'
+
 
 const API_KEY = `${process.env.REACT_APP_MAUSAM_API_KEY}`
 const PLACES_KEY = `${process.env.REACT_APP_UNSPLASH_API_KEY}`;
@@ -26,6 +28,14 @@ const Mausam = () => {
     const [display, setDisplay] = useState(false)
     const [country, setCountry] = useState('')
     const [timezone, setTimezone] = useState('')
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const changeWidth = () => {
+          setScreenWidth(window.innerWidth);
+        }
+        window.addEventListener('resize', changeWidth)
+      }, []);
 
 
     function isEmptyOrSpaces(str){
@@ -40,6 +50,7 @@ const Mausam = () => {
             const url1 = `https://api.openweathermap.org/data/2.5/weather?q=${search.trim()}&appid=${API_KEY}`;
             const res = await fetch(url1);
             const data = await res.json();
+            
                 // console.log(data.sys.country)
             let regionNames = new Intl.DisplayNames(['en'], {type: 'region'});
             const countryName = regionNames.of(data.sys.country);
@@ -136,7 +147,8 @@ const Mausam = () => {
                         {
                             currentData ? 
                             <div className='main'>
-                                <img src={img} alt=" " className='bg' />
+                                <img src={img} alt=" " className='bg' /> 
+                                
                                 <div className='left'>
                                     <CurrentData item={currentData} showUnit={showUnit} cityName={cityName} country={country} timezone={timezone} />
                                     <DailyData item={dailyData} showUnit={showUnit} timezone={timezone} />
@@ -232,7 +244,7 @@ const Mausam = () => {
             </>
         }
         
-        <div className='mainBg'><img src={!display ? bg : mainBg} alt="" /></div>
+        <div className='mainBg'><img src={!display ? screenWidth < 600 ? mobileBG : bg : mainBg} alt="" /></div>
     </div>
   )
 }

@@ -70,5 +70,5 @@ export const dayFunction = (date, timezone) => {
 //To calculate time in HH:MM format
 export const timeFunction = (date, timezone) => {
     const time = new Date(date*1000);
-    return time.toLocaleTimeString('en-In', {hour: "numeric", hour12: true, minute: "numeric", timeZone: timezone})
+    return time.toLocaleTimeString('en-In', {hour: "2-digit", hour12: true, minute: "2-digit", timeZone: timezone})
 }

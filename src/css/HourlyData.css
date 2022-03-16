@@ -10,9 +10,9 @@
 
 .hourly {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    width: 30vw;
     gap: 4vw;
     padding: 0.8vw;
     color: #fff;
@@ -38,17 +38,35 @@
     border-radius: 0.2vw;
 }
 
-.time, .temp {
-    width: 10vw;
-}
 
-.time {
-    display: flex;
-    justify-content: start;
-    padding-left: 1vw;
-}
-
-.temp {
-    display: flex;
-    justify-content: flex-start;
+@media (max-width : 600px) {
+    .hourly-data-main {
+        padding: 5vw 2vw;
+        padding-bottom: 0;
+        /* background-color: #142683; */
+        /* background-color: #3C1E18; */
+        background-color: #EDEADE;
+        background-color: #FCF5E5;
+    }
+    .hourly-data {
+        justify-content: space-around;
+        padding-bottom: 3vw;
+        /* padding-top: 3vw; */
+    }
+    .hourly{
+        width: 95%;
+        gap: 10vw !important;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        font-size: 4vw;
+        color: #000000;
+        text-shadow: none;
+        font-weight: 700;
+    }
+    .hourly-icon {
+        width: 10vw;
+    }
+    .hourly:hover {
+        background-color: transparent;
+    }
 }
