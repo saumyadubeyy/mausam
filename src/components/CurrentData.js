@@ -10,12 +10,14 @@ const CurrentData = ({item, showUnit, cityName, country, timezone}) => {
   const letterCount = (cityName) => {
     return cityName.replace(/[^a-zA-Z]/g, '').length;
   }
-
+ 
   return (
     <div className='current'>
+      <div className='head-holder'>
         <div className={ letterCount(cityName) > 20 ? 'citynameBig' : 'cityName'}>{cityName}, {letterCount(cityName) >= 20 ? <br/> : null} {country}</div>
-          <div className='date'>{day(item.dt, timezone)}, {time(item.dt, timezone)}</div>
-          <div className='date'>{dateSuffix(item.dt, timezone)}{dateFunction(item.dt,timezone)}</div>
+        <div className='date'>{day(item.dt, timezone)}, {time(item.dt, timezone)}</div>
+        <div className='date'>{dateSuffix(item.dt, timezone)}{dateFunction(item.dt,timezone)}</div>
+      </div>
         <div className='main-current-holder'>
             <div className='current-holder'>
                 <div className='main-holder'>

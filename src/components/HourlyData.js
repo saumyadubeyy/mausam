@@ -5,14 +5,14 @@ import "../css/HourlyData.css"
 
 const HourlyData = ({item, showUnit, timezone}) => {
   return (
-    <div>
+    <div className='hourly-data-main'>
       {
         item.map((data) => {
           return (
             <div key={data.dt} className='hourly-data'>
                 <div className="hourly">
-                  <div className='time'>{timeFunction(data.dt, timezone)}</div>
-                  <div className='temp'>{data.temp} °{showUnit}</div>
+                  <div>{timeFunction(data.dt, timezone)}</div>
+                  <div>{data.temp} °{showUnit}</div>
                   <img className='hourly-icon' src={require(`../assets/icons/${data.weather[0].icon}.png`)} alt="" />
                 </div>
             </div>

@@ -6,7 +6,7 @@ const DailyData = ({item, showUnit, timezone}) => {
   const data = item.slice(1,6);
   return (
     <div className='daily-data'>
-      {
+      { 
         item ? 
         <div className='daily-data-holder'>
             {
@@ -14,7 +14,7 @@ const DailyData = ({item, showUnit, timezone}) => {
                 return (  
                   <div key={data.dt} className="data-box">
                     <div>{dayFunction(data.dt, timezone)}</div>
-                    <img style={{width : "4vw"}} src={require(`../assets/icons/${data.weather[0].icon}.png`)} className='hello' alt="" />
+                    <img style={{width : "4vw"}} src={require(`../assets/icons/${data.weather[0].icon}.png`)} className='daily-icon' alt="" />
                     <div>{data.temp.day} °{showUnit}</div>
                     {/* <div>Max: {data.temp.max} °{showUnit}</div>
                     <div>Min: {data.temp.min} °{showUnit}</div> */}
