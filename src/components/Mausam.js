@@ -50,7 +50,7 @@ const Mausam = () => {
             const url1 = `https://api.openweathermap.org/data/2.5/weather?q=${search.trim()}&appid=${API_KEY}`;
             const res = await fetch(url1);
             const data = await res.json();
-            
+
                 // console.log(data.sys.country)
             let regionNames = new Intl.DisplayNames(['en'], {type: 'region'});
             const countryName = regionNames.of(data.sys.country);
@@ -115,24 +115,24 @@ const Mausam = () => {
                         <img className='img' src={searchGlass} alt=" " onClick={(e) => {fetchData(); setLoading(true);}} />
                     </div>
                     <div className='radio-buttons'>
-                        <label>
                             <input
                                 type="radio"
+                                id="unit-one"
                                 name="unit"
                                 checked={unit === "imperial"}
                                 value="imperial"
                                 onChange = {(e) => setUnit(e.target.value)}
-                            /> Fahrenheit
-                        </label>
-                        <label>
+                            />
+                        <label htmlFor='unit-one'>° F</label>
                             <input
                                 type="radio"
+                                id='unit-two'
                                 name="unit"
                                 checked={unit === "metric"}
                                 value="metric"
                                 onChange = {(e) => setUnit(e.target.value)}
-                            /> Celcius
-                        </label>
+                            /> 
+                        <label htmlFor='unit-two'>° C</label>
                     </div>
         </div> 
         { error ? <div className={display ? 'error' : 'formDisplay'}>PLEASE ENTER A VALID CITY NAME</div> : null}
@@ -173,26 +173,25 @@ const Mausam = () => {
                                         <img className='img' src={searchGlass} alt=" " onClick={(e) => {fetchData(); setLoading(true);}} />
                                     </div>
                                     <div className='radio-buttons'>
-                                        <label>
-                                            <input
-                                                type="radio"
-                                                name="unit"
-                                                value="imperial"
-                                                onChange = {(e) => setUnit(e.target.value)}
-                                                defaultChecked={unit === "imperial"}
-                                            /> Fahrenheit
-                                        </label>
-                                        <label>
-                                            <input
-                                                type="radio"
-                                                name="unit"
-                                                value="metric"
-                                                onChange = {(e) => setUnit(e.target.value)}
-                                                position = "static"
-                                                defaultChecked={unit === "metric"}
-                                            /> Celcius
-                                        </label>
-                                    </div>
+                                        <input
+                                            type="radio"
+                                            id="unit-one"
+                                            name="unit"
+                                            checked={unit === "imperial"}
+                                            value="imperial"
+                                            onChange = {(e) => setUnit(e.target.value)}
+                                        />
+                                        <label htmlFor='unit-one'>° F</label>
+                                        <input
+                                            type="radio"
+                                            id='unit-two'
+                                            name="unit"
+                                            checked={unit === "metric"}
+                                            value="metric"
+                                            onChange = {(e) => setUnit(e.target.value)}
+                                        /> 
+                                        <label htmlFor='unit-two'>° C</label>
+                                </div>
                                 </div> 
                         { error ? <div className='error'>PLEASE ENTER A VALID CITY NAME</div> : null}
                         <Footer />
@@ -218,24 +217,24 @@ const Mausam = () => {
                                         <img className='img' src={searchGlass} alt=" " onClick={(e) => {fetchData(); setLoading(true);}} />
                                     </div>
                                     <div className='radio-buttons'>
-                                        <label>
-                                            <input
-                                                type="radio"
-                                                name="unit"
-                                                checked={unit === "imperial"}
-                                                value="imperial"
-                                                onChange = {(e) => setUnit(e.target.value)}
-                                            /> Fahrenheit
-                                        </label>
-                                        <label>
-                                            <input
-                                                type="radio"
-                                                name="unit"
-                                                checked={unit === "metric"}
-                                                value="metric"
-                                                onChange = {(e) => setUnit(e.target.value)}
-                                            /> Celcius
-                                        </label>
+                                        <input
+                                            type="radio"
+                                            id="unit-one"
+                                            name="unit"
+                                            checked={unit === "imperial"}
+                                            value="imperial"
+                                            onChange = {(e) => setUnit(e.target.value)}
+                                        />
+                                        <label htmlFor='unit-one'>° F</label>
+                                        <input
+                                            type="radio"
+                                            id='unit-two'
+                                            name="unit"
+                                            checked={unit === "metric"}
+                                            value="metric"
+                                            onChange = {(e) => setUnit(e.target.value)}
+                                        /> 
+                                        <label htmlFor='unit-two'>° C</label>
                                     </div>
                         </div> 
                             { error ? <div className='error'>PLEASE ENTER A VALID CITY NAME</div> : null}
