@@ -10,10 +10,10 @@
 
 <p align="center">
   <h3 align="left">Web UI:</h3>
-  <img src="https://user-images.githubusercontent.com/56453693/159184250-1a6608d7-4040-42b7-a1bb-1bc01480ca4f.png" />
-  <img src="https://user-images.githubusercontent.com/56453693/159184265-dfa91068-3213-4112-ad6a-8c84f357bf3b.png" />
+  <img src="https://user-images.githubusercontent.com/56453693/159338703-96e593af-4599-47cb-a6aa-54877483cee8.png" />
+  <img src="https://user-images.githubusercontent.com/56453693/159339334-46b59b02-7d69-4d43-b408-ccaa55912006.png" />
   <h3 align="left">Mobile UI:</h3>
-  <img src="https://user-images.githubusercontent.com/56453693/159184273-0130148f-3d96-4034-b4de-730072c95b08.png" />
-  <img src="https://user-images.githubusercontent.com/56453693/159184401-8b96cf02-2bcd-467f-9839-a5f7783b7b47.png" />
+  <img src="https://user-images.githubusercontent.com/56453693/159339480-2b9f6b4b-b9e7-44c3-be07-3280ad37d39f.png" />
+  <img src="https://user-images.githubusercontent.com/56453693/159339598-acb0afae-4a39-4251-9d86-9938c447816e.png" />
 </p>
   
